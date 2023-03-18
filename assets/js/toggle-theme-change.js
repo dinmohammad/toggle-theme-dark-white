@@ -13,10 +13,7 @@ function toggleMode() {
         // console.log('light2')
     }
     else if(mode == 'light'){ 
-        
         localStorage.setItem("mode", "dark");
-        element.classList.remove("light");
-        element.classList.add("dark");
         document.documentElement.setAttribute("data-theme", "dark")//set theme to dark
         // console.log('dark2')
     }
