@@ -1,12 +1,22 @@
 
 /* =============== Default CSS - START */
-body.light {
-    background: #fff;
+html[data-theme='light'] {
+    --bg: #fff;
+    --bg-panel: #ebebeb;
+    --color-heading: rgb(27, 168, 14);
+    --color-text: #333333;
+}
+html[data-theme='dark'] {
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-heading: #0077ff;
+    --color-text: #B5B5B5;
 }
 
-body.dark {
-    background: #555;
+body{
+    background-color: var(--bg) !important;
 }
+
 /* =============== Default CSS - END */
 
 /* =============== Switch toggle btn CSS - START */

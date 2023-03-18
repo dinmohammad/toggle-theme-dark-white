@@ -11,13 +11,17 @@ function toggleMode() {
         localStorage.setItem("mode", "light");
         element.classList.remove("dark");
         element.classList.add("light");
+        document.documentElement.setAttribute("data-theme", "light"); //set theme to light
+
         console.log('light2')
 
     }
-else if(mode == 'light'){ 
+    else if(mode == 'light'){ 
+        
         localStorage.setItem("mode", "dark");
         element.classList.remove("light");
         element.classList.add("dark");
+        document.documentElement.setAttribute("data-theme", "dark")//set theme to light
         console.log('dark2')
     }
 
@@ -32,7 +36,11 @@ function setMode() {
 
     if(mode == 'light'){
         document.body.classList.add('light');
+            document.documentElement.setAttribute("data-theme", "light"); //set theme to light
+
     }else if(mode == 'dark'){
         document.body.classList.add('dark');
+        document.documentElement.setAttribute("data-theme", "dark")//set theme to light
+
     }
 }
